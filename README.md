@@ -1,6 +1,6 @@
 # Elastic-Cloud-Enterprise-Deployment
 
-This repo is to create a medium installation of the Elastic cloud enterprise using the ansible playbooks for the centos 8.x machine.
+This repo is to create a medium installation of the Elastic Cloud Enterprise version 3.5.1 using the Ansible playbooksand terraform.
 
 A medium installation with separate management services. 
 
@@ -8,10 +8,10 @@ A medium installation with separate management services.
 3 hosts with 256 GB RAM each for allocators
 3 availability zones
 
-
-We have created these 6 virtual machines on the cloud platform using terraform plan. 
+We have created these 6 virtual machines on the cloud platform using Terraform plan. 
 
 ECE version: 3.5.1
+
 Centos Version: CentOS Linux release 8.4.2105
 
 Ansible Version: core 2.11.5
