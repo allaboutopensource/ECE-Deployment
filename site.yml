@@ -1,0 +1,18 @@
+- hosts: primary
+  gather_facts: true
+  roles:
+    - ansible-elastic-cloud-enterprise
+  vars:
+    ece_primary: true
+
+- hosts: director_coordinator
+  roles:
+    - ansible-elastic-cloud-enterprise
+  vars:
+    ece_roles: [director, coordinator, proxy]
+
+- hosts: allocator
+  roles:
+    - ansible-elastic-cloud-enterprise
+  vars:
+    ece_roles: [allocator]

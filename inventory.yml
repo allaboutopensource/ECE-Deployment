@@ -1,0 +1,34 @@
+all:
+  vars:
+    ansible_become: yes
+    device_name: vdb
+    elastic_uid: 1002
+    elastic_gid: 1002
+    ece_installer_path: /root/elastic/elastic-cloud-enterprise.sh
+    ansible_user: ellucian
+    ansible_ssh_private_key_file: /root/elastic/itops-infra-project.pem
+  children:
+    primary:
+      hosts:
+        host1:
+          ansible_host: 10.0.104.85
+          availability_zone: zone-1
+    director_coordinator:
+      hosts:
+        host2:
+          ansible_host: 10.0.96.175
+          availability_zone: zone-2
+        host3:
+          ansible_host: 10.0.102.61
+          availability_zone: zone-3
+    allocator:
+      hosts:
+        host4:
+          ansible_host: 10.0.102.249
+          availability_zone: zone-1
+        host5:
+          ansible_host: 10.0.105.92
+          availability_zone: zone-2
+        host6:
+          ansible_host: 10.0.102.154
+          availability_zone: zone-3
